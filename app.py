@@ -7,7 +7,7 @@ import joblib
 # ==========================
 # Load model and encoders
 # ==========================
-final_model = joblib.load("car_price_model.pkl")
+#final_model = joblib.load("car_price_model.pkl")
 label_encoders = joblib.load("label_encoders.pkl")
 num_medians = joblib.load("num_medians.pkl")  # medians from training
 

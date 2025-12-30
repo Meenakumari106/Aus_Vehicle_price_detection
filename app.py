@@ -7,7 +7,7 @@ import joblib
 # ==========================
 # Load model and encoders
 # ==========================
-#final_model = joblib.load("car_price_model.pkl")
+final_model = joblib.load("Gradient_Boosting.pkl")
 label_encoders = joblib.load("label_encoders.pkl")
 num_medians = joblib.load("num_medians.pkl")  # medians from training
 
@@ -18,12 +18,12 @@ st.title("Car Price Prediction App 🚗💰")
 st.write("Enter the car details below to predict its price.")
 
 # 1️⃣ User Inputs
-brand = st.selectbox("Brand", options=["Toyota", "Honda", "BMW", "Mercedes", "Hyundai", "Other"])
+brand = st.selectbox("Brand", options=["Toyota", "Honda", "BMW", "Mercedes", "Hyundai", "Other","Mazda"])
 model = st.text_input("Model")
 transmission = st.selectbox("Transmission", options=["Automatic", "Manual"])
-fuel_type = st.selectbox("Fuel Type", options=["Petrol", "Diesel", "CNG", "Electric"])
+fuel_type = st.selectbox("Fuel Type", options=["Petrol", "Diesel", "CNG", "Electric","Hybrid","Leaded","Unleaded"])
 drive_type = st.selectbox("Drive Type", options=["FWD", "RWD", "AWD"])
-body_type = st.selectbox("Body Type", options=["Sedan", "SUV", "Hatchback", "Coupe", "Other"])
+body_type = st.selectbox("Body Type", options=["Sedan", "SUV", "Hatchback", "Coupe",, "Other"])
 year = st.number_input("Year", min_value=1990, max_value=2025, value=2020)
 kilometers = st.number_input("Kilometers Driven", min_value=0, max_value=1000000, value=25000)
 engine_size = st.number_input("Engine Size (L)", min_value=0.5, max_value=10.0, value=1.8, step=0.1)
